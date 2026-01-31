@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@layer base{
+  body{
+    @apply bg-black text-gray-100
+  };
+  h1,h2,h3,h4,h5,h6{
+    @apply text-white;
+  }
+}
+
+@theme {
+  --color-cyber-green: #00ff00;
+  --color-cyber-green-shadow: #00ff0080;
+  --color-cyber-white: #e2f9e4;
+  --color-cyber-skyblue: #00d4ff;
+  --shadow-neon: 0 0 20px var(--color-cyber-green)
+}
