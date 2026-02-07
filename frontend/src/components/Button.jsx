@@ -1,7 +1,7 @@
 export function Button({icon,text,variant='primary'}){
   const variants = {
-    primary:"bg-cyber-green  shadow-neon",
-    secondary:" bg-black text-white/80 border border-cyber-green",
+    primary:"bg-cyber-green/90 font-extrabold active:bg-cyber-skyblue active:shadow-neon active:shadow-neon-blue active:text-white",
+    secondary:" bg-black text-white/80 border border-cyber-green active:border-cyber-skyblue active:shadow-neon-blue active:text-white",
   }
   return (
     <>

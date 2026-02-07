@@ -13,5 +13,6 @@
   --color-cyber-green-shadow: #00ff0080;
   --color-cyber-white: #e2f9e4;
   --color-cyber-skyblue: #00d4ff;
-  --shadow-neon: 0 0 20px var(--color-cyber-green)
+  --shadow-neon: 0 0 20px var(--color-cyber-green);
+  --shadow-neon-blue: 0 0 10px 2px var(--color-cyber-skyblue)
 }
