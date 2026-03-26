@@ -1,7 +1,31 @@
 import { CardSkill, HeaderCardSection } from "../components/CardTec.jsx"
 import {IconTools, IconNewsMode,IconStorage} from "../components/icon.jsx"
 
+import { useEffect, useState } from "react" 
+
+import { client } from "../client/sanity.js"
+
 export function Tech(){
+
+  const [tech, setTech] = useState([])
+  const [category, setCategory] = useState([])
+  
+  useEffect(() => {
+    client.fetch(`*[_type == "tech"]{
+      id,
+      name,
+      area,
+      description,
+      "imageUrl": image.asset->url,
+    }`).then((data) => {
+      console.log(data)
+      setTech(data)
+      const newData = [...new Set(data.map((i)=>i.area))]
+      console.log(newData)
+      setCategory(newData)
+    })
+  }, [])
+
   return (
     <main className="m-5 pb-30">
       {/* <header className="text-center absolute top-0 w-full left-0 border-b border-gray-100/40 flex justify-center">
@@ -23,18 +47,49 @@ export function Tech(){
       </section>
       <HeaderCardSection nameSection={"frontend"} icon={<IconNewsMode/>}/>
       <section className="grid grid-cols-2 gap-6">
-        <CardSkill name={"html"} description={"dsadsdawsd"}/>
+        {tech.map((item)=>{
+          if(item.area === 'Frontend'){
+            return <CardSkill key={item.id} name={item.name}/>
+          }
+          return null
+        })}
         <CardSkill name={"html"} description={"dsadsdawsd"}/>
       </section>
       <HeaderCardSection nameSection={"backend"} icon={<IconStorage/>}/>
       <section className="grid grid-cols-2 gap-6">
-        <CardSkill name={"html"} description={"dsadsdawsd"}/>
-        <CardSkill name={"html"} description={"dsadsdawsd"}/>
+        {tech.map((item)=>{
+          if(item.area === 'Backend'){
+            return <CardSkill key={item.id} name={item.name} />
+          }
+          return null
+        })}
       </section>
       <HeaderCardSection nameSection={"Tools"} icon={<IconTools/>}/>
       <section className="grid grid-cols-2 gap-6">
-        <CardSkill name={"html"} description={"dsadsdawsd"}/>
-        <CardSkill name={"html"} description={"dsadsdawsd"}/>
+        {tech.map((item)=>{
+          if(item.area === 'Herramienta de Desarrollo'){
+            return <CardSkill key={item.id} name={item.name} />
+          }
+          return null
+        })}
+      </section>
+      <HeaderCardSection nameSection={"DataBase"} icon={<IconTools/>}/>
+      <section className="grid grid-cols-2 gap-6">
+        {tech.map((item)=>{
+          if(item.area === 'Gestión de Datos'){
+            return <CardSkill key={item.id} name={item.name} />
+          }
+          return null
+        })}
+      </section>
+      <HeaderCardSection nameSection={"Entorno"} icon={<IconTools/>}/>
+      <section className="grid grid-cols-2 gap-6">
+        {tech.map((item)=>{
+          if(item.area === 'Entorno de Desarrollo'){
+            return <CardSkill key={item.id} name={item.name} />
+          }
+          return null
+        })}
       </section>
     </main>
   )

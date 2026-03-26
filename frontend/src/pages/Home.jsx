@@ -1,4 +1,5 @@
 import { Button } from "../components/Button";
+import { NavLink } from "react-router-dom"
 
 export function Home(){
   const ArrowIcon= (<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>)
@@ -9,11 +10,21 @@ export function Home(){
       {/* <div className="h-40 w-40 absolute inset-0 top-5 mx-auto ">
         <img src={logo} alt="" className=""/>
       </div> */}
-      <div><strong className="tracking-[3px] p-2 text-xs inline text-cyber-green uppercase shadow-[0_0_15px_5px_rgba(34,197,94,0.4)] rounded-md">system online</strong></div>
-      <h1 className="text-6xl uppercase font-bold text-center">frontend <span className="mt-2 block bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">developer</span></h1>
+      <div>
+        <strong className="tracking-[3px] p-2 text-xs inline text-cyber-green uppercase shadow-[0_0_15px_5px_rgba(34,197,94,0.4)] rounded-md">system online</strong>
+      </div>
+
+      <h1 className="text-6xl uppercase font-bold text-center">frontend
+        <span className="mt-2 block bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">developer</span>
+      </h1>
+
       <p className="border-l border-cyber-green pl-2 text-white/50 text-justify">Construyo interfaces dinámicas con React y estándares web modernos. Mi trabajo se centra en transformar conceptos en realidades digitales mediante código eficiente y diseños fluidas con TailwindCSS</p>
-      <Button text={'view projects'} icon={ArrowIcon}/>
-      <Button text={'download cv'} icon={Download} variant={"secondary"}/>
+      <NavLink to={'/Project'}>
+        <Button text={'view projects'} icon={ArrowIcon} />
+      </NavLink>
+      <a href="../public/pdf/cv-riszart-daryl-vergara-cajacuri.pdf" download='cv-riszart-daryl-vergara-cajacuri.pdf'>
+        <Button text={'download cv'} icon={Download} variant={"secondary"}/>
+      </a>
     </main>
   )
 }
