@@ -4,6 +4,11 @@ export default {
   type: 'document',
   fields: [
     {
+      name: 'id',
+      title: 'id-project',
+      type:'number'
+    },
+    {
       name: 'title',
       title: 'Project Title',
       type: 'string',
@@ -26,5 +31,21 @@ export default {
       title: 'Project Link',
       type: 'url',
     },
+    {
+      name: 'linkRepository',
+      title: 'Respository',
+      type: 'url'
+    },
+    {
+      name: 'year',
+      title: 'Year Project',
+      type: 'number',
+    },
+    {
+      name: 'atribute',
+      title: 'atribute',
+      type: 'array',
+      of:[{type:'string'}]
+    }
   ],
 }
