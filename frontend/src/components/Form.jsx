@@ -33,22 +33,22 @@ export function Form(){
 				<input autoComplete="off" type="text" onChange={(e)=>{setHoneypot(e.target.value)}}/>	
 			</div>
 			<div className={divEstilos}>
-				<label className={labelEstilos} htmlFor="name">name</label>
+				<label className={labelEstilos} htmlFor="name">nombre</label>
 				<input className={`capitalize ${inputEstilos}`} autoComplete="off" id="name" type="text" onChange={(e)=>{setData({...data,name:e.target.value})}} placeholder="riszart daryl" required/>	
 			</div>
 			<div className={divEstilos}>
-				<label className={labelEstilos} htmlFor="email">email</label>
+				<label className={labelEstilos} htmlFor="email">CORREO ELECTRÓNICO</label>
 				<input className={inputEstilos} autoComplete="off" id="email" type="email" onChange={(e)=>{setData({...data,email:e.target.value})}} placeholder="riszart@example.com" required/>	
 			</div>
 			<div className={divEstilos}>
-				<label className={labelEstilos} htmlFor="numero">cell</label>
+				<label className={labelEstilos} htmlFor="numero">CELULAR</label>
 				<input className={inputEstilos} autoComplete="off" id="numero" type="number" onChange={(e)=>{setData({...data,cell:e.target.value})}} placeholder="987 654 321" required/>	
 			</div>
 			<div className={divEstilos}>
-				<label className={labelEstilos} htmlFor="message">message</label>
-				<textarea className={textareaEstilos} autoComplete="off" id="message" onChange={(e)=>{setData({...data,message:e.target.value})}} placeholder="Tell me about your project ..." required/>	
+				<label className={labelEstilos} htmlFor="message">mensaje</label>
+				<textarea className={textareaEstilos} autoComplete="off" id="message" onChange={(e)=>{setData({...data,message:e.target.value})}} placeholder="Cuéntame sobre tu proyecto..." required/>	
 			</div>
-			<Button type='submit'  text={'send message'}/>
+			<Button type='submit'  text={'enviar mensaje'}/>
 		</form>
 	)
 }

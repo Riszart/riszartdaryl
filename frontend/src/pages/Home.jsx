@@ -20,10 +20,10 @@ export function Home(){
 
       <p className="border-l border-cyber-green pl-2 text-white/50 text-justify">Construyo interfaces dinámicas con React y estándares web modernos. Mi trabajo se centra en transformar conceptos en realidades digitales mediante código eficiente y diseños fluidas con TailwindCSS</p>
       <NavLink to={'/Project'}>
-        <Button text={'view projects'} icon={ArrowIcon} />
+        <Button text={'ver proyectos'} icon={ArrowIcon} />
       </NavLink>
       <a href="../public/pdf/cv-riszart-daryl-vergara-cajacuri.pdf" download='cv-riszart-daryl-vergara-cajacuri.pdf'>
-        <Button text={'download cv'} icon={Download} variant={"secondary"}/>
+        <Button text={'descargar cv'} icon={Download} variant={"secondary"}/>
       </a>
     </main>
   )

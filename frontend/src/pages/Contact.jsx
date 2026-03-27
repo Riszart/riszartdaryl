@@ -23,41 +23,43 @@ export function Contact(){
 
   return (
     <main className="m-5 mb-40">
-      <header></header>
-      <h1 className="text-4xl capitalize font-medium">let's connect</h1>
-      <p className="text-gray-100/40 py-8">Have a project in mind? I'm avalible for frrelance work and full-time positions</p>
-      {/* <section className="flex flex-col gap-4">
+      <section className="mb-5">
+        <span className="uppercase text-cyber-green">CONTACTO</span>
+        <h2 className="mt-5 capitalize text-6xl font-bold mb-6"> <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">¡Hablemos!</span></h2>
+        <p className="text-gray-400 leading-relaxed max-w-lg">¿Tienes un proyecto en mente? Estoy disponible para trabajos freelance y posiciones de tiempo completo.</p>
+      </section>
+
+      <section className="flex flex-col gap-2">
         <article className="flex gap-2 items-center">
-          <div className="h-12 aspect-square text-cyber-green bg-gray-100/20 p-2 rounded-md" >
-            <IconMail/>
+          <div className="h-8 aspect-square text-cyber-green bg-gray-100/20 p-2 rounded-md" >
+            <IconMail />
           </div>
           <div>
-            <strong className="uppercase font-normal text-gray-100/50">email address</strong>
-            <h6>{mailRevealed ? atob(encodedEmail) : "Click to reveal email"}</h6>
+            <strong className="uppercase font-normal text-gray-100/50 text-xs">CORREO</strong>
+            <h6 className="text-sm">{mailRevealed ? atob(encodedEmail) : "Haz clic para ver"}</h6>
           </div>
         </article>
         <article className="flex gap-2 items-center">
-          <div className="h-12 aspect-square text-cyber-green bg-gray-100/20 p-2 rounded-md" >
+          <div className="h-8 aspect-square text-cyber-green bg-gray-100/20 p-2 rounded-md" >
             <IconPhone/>
           </div>
           <div>
-            <strong className="uppercase font-normal text-gray-100/50">phone number</strong>
-            <h6>{phoneRevealed ? atob(encodedPhone) : "Click to reveal phone"}</h6>
+            <strong className="uppercase font-normal text-gray-100/50 text-xs">TELÉFONO</strong>
+            <h6 className="text-sm">{phoneRevealed ? atob(encodedPhone) : "Haz clic para ver"}</h6>
           </div>
         </article>
         <article className="flex gap-2 items-center">
-          <div className="h-12 aspect-square text-cyber-green bg-gray-100/20 p-2 rounded-md" >
+          <div className="h-8 aspect-square text-cyber-green bg-gray-100/20 p-2 rounded-md" >
             <IconLocation/>
           </div>
           <div>
-            <strong className="uppercase font-normal text-gray-100/50">location</strong>
-            <h6>Peru, Lima</h6>
+            <strong className="uppercase font-normal text-gray-100/50 text-xs">UBICACIÓN</strong>
+            <h6 className="text-sm">Peru, Lima</h6>
           </div>
         </article>
-      </section> */}
-      <Form/>
+      </section>
 
-      <section className="flex gap-4 my-10 text-gray-100/60">
+      <section className="flex gap-4 my-6 text-gray-100/60">
         <div className="h-10 aspect-square border rounded-md p-2">
           <a href="https://wa.me/+51923232870" target="_blank"><IconWhatsApp/></a>
         </div>
@@ -68,6 +70,8 @@ export function Contact(){
           <a href="https://github.com/Riszart" target="_blank"><IconGithub/></a>
         </div>
       </section>
+
+      <Form/>
     </main>
   )
 }

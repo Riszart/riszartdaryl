@@ -34,15 +34,14 @@ export function Tech(){
       </header> */}
       <section className="flex flex-col mt-0">
         <div className="flex items-center gap-2">
-          <span className="block w-10 border-b border-cyber-green"></span>
-          <h2 className="uppercase text-cyber-green">skills & tools</h2>
+          <h2 className="uppercase text-cyber-green">MI STACK TECNOLÓGICO</h2>
         </div>
         <div className="capitalize text-6xl font-bold mb-6">
-          <p>my digital</p>
-          <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">arsenal</span>
+          <p>Mi Arsenal</p>
+          <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">Digital</span>
         </div>
         <div>
-          <p className="text-gray-100/40">A curated list of technologies I use to build scalable, high-performance web applications</p>
+          <p className="text-gray-400 leading-relaxed max-w-lg">Una selección especializada de herramientas, librerías y lenguajes que utilizo para construir aplicaciones web escalables y de alto rendimiento.</p>
         </div>
       </section>
       <HeaderCardSection nameSection={"frontend"} icon={<IconNewsMode/>}/>
@@ -53,7 +52,6 @@ export function Tech(){
           }
           return null
         })}
-        <CardSkill name={"html"} description={"dsadsdawsd"}/>
       </section>
       <HeaderCardSection nameSection={"backend"} icon={<IconStorage/>}/>
       <section className="grid grid-cols-2 gap-6">
@@ -64,7 +62,7 @@ export function Tech(){
           return null
         })}
       </section>
-      <HeaderCardSection nameSection={"Tools"} icon={<IconTools/>}/>
+      <HeaderCardSection nameSection={"Herramientas & Diseño"} icon={<IconTools/>}/>
       <section className="grid grid-cols-2 gap-6">
         {tech.map((item)=>{
           if(item.area === 'Herramienta de Desarrollo'){
@@ -73,7 +71,7 @@ export function Tech(){
           return null
         })}
       </section>
-      <HeaderCardSection nameSection={"DataBase"} icon={<IconTools/>}/>
+      <HeaderCardSection nameSection={"Gestión de Datos"} icon={<IconTools/>}/>
       <section className="grid grid-cols-2 gap-6">
         {tech.map((item)=>{
           if(item.area === 'Gestión de Datos'){
@@ -82,7 +80,7 @@ export function Tech(){
           return null
         })}
       </section>
-      <HeaderCardSection nameSection={"Entorno"} icon={<IconTools/>}/>
+      <HeaderCardSection nameSection={"Infraestructura / DevOps"} icon={<IconTools/>}/>
       <section className="grid grid-cols-2 gap-6">
         {tech.map((item)=>{
           if(item.area === 'Entorno de Desarrollo'){

@@ -5,6 +5,7 @@ import { Home } from './pages/Home'
 import { Project } from './pages/Project'
 import { Contact } from './pages/Contact'
 import { Tech } from './pages/Tech'
+import { Education } from './pages/Education'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/Education' element={<Education/>}/>
         <Route path='/Project' element={<Project/>}/>
         <Route path='/Tech' element={<Tech/>}/>
         <Route path='/Contact' element={<Contact/>}/>
