@@ -41,7 +41,7 @@ const [proyectos, setProyectos] = useState([])
     <main className="p-5 pb-30">
       <section className="mb-5">
         <span className="uppercase text-cyber-green">portafolio</span>
-        <h2 className="capitalize text-6xl font-bold mb-6">mis <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">proyectos</span></h2>
+        <h2 className="capitalize text-5xl font-bold mb-6 font-orbitron">mis <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">proyectos</span></h2>
         <p className="text-gray-400 leading-relaxed max-w-lg">Una selección de aplicaciones web donde aplico tecnologías modernas para resolver problemas reales con código eficiente y escalable.</p>
       </section>
       <div className="flex flex-col">

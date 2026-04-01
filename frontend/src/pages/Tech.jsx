@@ -36,7 +36,7 @@ export function Tech(){
         <div className="flex items-center gap-2">
           <h2 className="uppercase text-cyber-green">MI STACK TECNOLÓGICO</h2>
         </div>
-        <div className="capitalize text-6xl font-bold mb-6">
+        <div className="capitalize text-5xl font-bold mb-6 font-orbitron">
           <p>Mi Arsenal</p>
           <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">Digital</span>
         </div>

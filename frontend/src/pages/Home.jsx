@@ -6,25 +6,30 @@ export function Home(){
   const Download = (<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>)
 
   return (
-    <main className="min-h-screen box-content pl-5 pr-5 flex flex-col justify-center gap-10 relative">
-      {/* <div className="h-40 w-40 absolute inset-0 top-5 mx-auto ">
-        <img src={logo} alt="" className=""/>
-      </div> */}
-      <div>
-        <strong className="tracking-[3px] p-2 text-xs inline text-cyber-green uppercase shadow-[0_0_15px_5px_rgba(34,197,94,0.4)] rounded-md">system online</strong>
-      </div>
+    <>
+      <main className="min-h-screen box-content pl-5 pr-5 flex flex-col justify-center sm:items-center gap-10 relative">
+        {/* <div className="h-40 w-40 absolute inset-0 top-5 mx-auto ">
+          <img src={logo} alt="" className=""/>
+        </div> */}
+        <div>
+          <strong className="tracking-[3px] p-2 text-xs inline text-cyber-green uppercase shadow-[0_0_15px_5px_rgba(34,197,94,0.4)] rounded-md">system online</strong>
+        </div>
 
-      <h1 className="text-6xl uppercase font-bold text-center">frontend
-        <span className="mt-2 block bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">developer</span>
-      </h1>
+        <h1 className="text-4xl sm:text-7xl uppercase font-bold text-center font-orbitron">frontend
+          <span className="mt-2 block  bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">developer</span>
+        </h1>
 
-      <p className="border-l border-cyber-green pl-2 text-white/50 text-justify">Construyo interfaces dinámicas con React y estándares web modernos. Mi trabajo se centra en transformar conceptos en realidades digitales mediante código eficiente y diseños fluidas con TailwindCSS</p>
-      <NavLink to={'/Project'}>
-        <Button text={'ver proyectos'} icon={ArrowIcon} />
-      </NavLink>
-      <a href="../public/pdf/cv-riszart-daryl-vergara-cajacuri.pdf" download='cv-riszart-daryl-vergara-cajacuri.pdf'>
-        <Button text={'descargar cv'} icon={Download} variant={"secondary"}/>
-      </a>
-    </main>
+        <p className="border-l border-cyber-green pl-2 text-white/50 text-justify sm:w-3/4 sm:text-lg">
+        Construyo interfaces dinámicas con React y estándares web modernos. Mi trabajo se centra en transformar conceptos en realidades digitales mediante código eficiente y diseños fluidas con TailwindCSS</p>
+        <div className="flex gap-10 flex-col sm:flex-row">
+          <NavLink to={'/Project'}>
+            <Button text={'ver proyectos'} icon={ArrowIcon} />
+          </NavLink>
+          <a href="../public/pdf/cv-riszart-daryl-vergara-cajacuri.pdf" download='cv-riszart-daryl-vergara-cajacuri.pdf'>
+            <Button text={'descargar cv'} icon={Download} variant={"secondary"}/>
+          </a>
+        </div>
+      </main>    
+    </>
   )
 }

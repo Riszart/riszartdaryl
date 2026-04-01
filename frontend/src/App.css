@@ -1,18 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Orbitron:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Orbitron:wght@900&display=swap');
+
 @import "tailwindcss";
-@layer base{
-  body{
-    @apply bg-black text-gray-100
-  };
-  h1,h2,h3,h4,h5,h6{
-    @apply text-white;
-  }
-}
 
 @theme {
+
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-inter: "Inter", sans-serif;
+
   --color-cyber-green: #00ff00;
   --color-cyber-green-shadow: #00ff0080;
   --color-cyber-white: #e2f9e4;
   --color-cyber-skyblue: #00d4ff;
   --shadow-neon: 0 0 20px var(--color-cyber-green);
   --shadow-neon-blue: 0 0 10px 2px var(--color-cyber-skyblue)
+}
+
+@layer base{
+  body{
+    @apply bg-black text-gray-100 font-inter tracking-wider
+  };
+  h1,h2,h3,h4,h5,h6{
+    @apply text-white ;
+  }
 }

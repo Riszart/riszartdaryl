@@ -25,7 +25,7 @@ export function Contact(){
     <main className="m-5 mb-40">
       <section className="mb-5">
         <span className="uppercase text-cyber-green">CONTACTO</span>
-        <h2 className="mt-5 capitalize text-6xl font-bold mb-6"> <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">¡Hablemos!</span></h2>
+        <h2 className="mt-5 capitalize text-5xl font-bold mb-6 font-orbitron"> <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">¡Hablemos!</span></h2>
         <p className="text-gray-400 leading-relaxed max-w-lg">¿Tienes un proyecto en mente? Estoy disponible para trabajos freelance y posiciones de tiempo completo.</p>
       </section>
 
@@ -39,6 +39,8 @@ export function Contact(){
             <h6 className="text-sm">{mailRevealed ? atob(encodedEmail) : "Haz clic para ver"}</h6>
           </div>
         </article>
+      <Form/>
+
         <article className="flex gap-2 items-center">
           <div className="h-8 aspect-square text-cyber-green bg-gray-100/20 p-2 rounded-md" >
             <IconPhone/>
@@ -63,15 +65,14 @@ export function Contact(){
         <div className="h-10 aspect-square border rounded-md p-2">
           <a href="https://wa.me/+51923232870" target="_blank"><IconWhatsApp/></a>
         </div>
-        <div className="h-10 aspect-square border rounded-md p-2">
+        {/* <div className="h-10 aspect-square border rounded-md p-2">
           <a href="https://music.youtube.com/playlist?list=PL0Yt0mEJED9JdP5vXRqu85XAyeI78wjKV&si=ElsED70ViRXdlBhe" target="_blank"><IconYoutubeMusic/></a>
-        </div>
+        </div> */}
         <div className="h-10 aspect-square border rounded-md p-2">
           <a href="https://github.com/Riszart" target="_blank"><IconGithub/></a>
         </div>
       </section>
 
-      <Form/>
     </main>
   )
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                

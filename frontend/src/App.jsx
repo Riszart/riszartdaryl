@@ -13,14 +13,20 @@ function App() {
   return (
     <Router>
       <Navbar/>
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Education' element={<Education/>}/>
-        <Route path='/Project' element={<Project/>}/>
-        <Route path='/Tech' element={<Tech/>}/>
-        <Route path='/Contact' element={<Contact/>}/>
-      </Routes>
-      <Footer/>
+      <div className='md:grid md:grid-cols-[auto_1fr]'>
+        <section className='md:w-55'></section>
+        <section className=' '>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/Education' element={<Education/>}/>
+            <Route path='/Project' element={<Project/>}/>
+            <Route path='/Tech' element={<Tech/>}/>
+            <Route path='/Contact' element={<Contact/>}/>
+          </Routes>
+          <Footer/>
+        </section>        
+      </div>
+
     </Router>
   )
 }
