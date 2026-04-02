@@ -15,7 +15,7 @@ function App() {
       <Navbar/>
       <div className='md:grid md:grid-cols-[auto_1fr]'>
         <section className='md:w-55'></section>
-        <section className=' '>
+        <section className='md:flex md:flex-col md:items-center w-full'>
           <Routes>
             <Route path='/' element={<Home/>}/>
             <Route path='/Education' element={<Education/>}/>

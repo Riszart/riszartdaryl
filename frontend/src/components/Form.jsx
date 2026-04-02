@@ -2,7 +2,7 @@ import { Button } from "./Button"
 
 import { useState } from "react"
 
-export function Form(){
+export function Form({className}){
 	const [honeypot,setHoneypot] = useState("")
 
 	const [data,setData] = useState({
@@ -22,13 +22,13 @@ export function Form(){
 		console.log(data)
 	}
 
-	const inputEstilos = "h-15 border border-cyber-green focus:border-cyber-skyblue focus:outline-none p-2 rounded-md"
-	const textareaEstilos = "h-30 border border-cyber-green focus:border-cyber-skyblue focus:outline-none rounded-md p-2 resize-none"
+	const inputEstilos = "h-15 border border-cyber-green/30 focus:border-cyber-skyblue focus:outline-none p-2 rounded-md"
+	const textareaEstilos = "h-30 border border-cyber-green/30 focus:border-cyber-skyblue focus:outline-none rounded-md p-2 resize-none"
 	const labelEstilos = "uppercase text-sm font-medium pb-2"
 	const divEstilos = "flex flex-col"
 
 	return (
-		<form onSubmit={enviarForm} className="flex flex-col gap-4">
+		<form onSubmit={enviarForm} className={`flex flex-col gap-4  overflow-hidden ${className}`}>
 			<div className="opacity-0 absolute -z-10 w-0 h-0 overflow-hidden">
 				<input autoComplete="off" type="text" onChange={(e)=>{setHoneypot(e.target.value)}}/>	
 			</div>

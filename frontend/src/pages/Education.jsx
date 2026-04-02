@@ -26,10 +26,10 @@ const [education, setEducation] = useState([])
   }, [])
 
   return (
-    <main className="p-5 pb-30 md:max-w-200 ">
+    <main className="p-5 pb-30 md:max-w-200 w-full">
       <section className="mb-5">
         <span className="uppercase text-cyber-green" >educación</span>
-        <h2 className="capitalize text-5xl font-bold mb-6 font-orbitron">mis <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">estudios</span></h2>
+        <h2 className="capitalize text-5xl md:text-7xl font-bold mb-6 font-orbitron">mis <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">estudios</span></h2>
         <p className="text-gray-400 leading-relaxed max-w-lg ">Mi recorrido académico y técnico, centrado en el dominio de tecnologías modernas para crear aplicaciones robustas y escalables.</p>
       </section>
       <div className="flex flex-col">

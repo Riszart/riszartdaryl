@@ -1,9 +1,10 @@
 import { Button } from "../components/Button.jsx"
 import { HeaderCardSection } from "../components/CardTec.jsx"
 import { IconTrip , IconEducation } from "../components/icon"
+import imgNoDisponible from "../assets/img/img-not-diponible.webp"
 
-import { useState } from "react"
-import { useEffect } from "react"
+
+import { useState , useEffect } from "react"
 
 import { createClient } from '@sanity/client'
 
@@ -38,10 +39,10 @@ const [proyectos, setProyectos] = useState([])
   }, [])
 
   return (
-    <main className="p-5 pb-30">
+    <main className="p-5 pb-30 md:max-w-200 w-full">
       <section className="mb-5">
         <span className="uppercase text-cyber-green">portafolio</span>
-        <h2 className="capitalize text-5xl font-bold mb-6 font-orbitron">mis <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">proyectos</span></h2>
+        <h2 className="capitalize text-5xl md:text-7xl font-bold mb-6 font-orbitron">mis <span className="mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">proyectos</span></h2>
         <p className="text-gray-400 leading-relaxed max-w-lg">Una selección de aplicaciones web donde aplico tecnologías modernas para resolver problemas reales con código eficiente y escalable.</p>
       </section>
       <div className="flex flex-col">
@@ -56,6 +57,7 @@ const [proyectos, setProyectos] = useState([])
             return (
               <article key={`${proj.id}`} className="border border-gray-100/50 p-5 rounded-xl relative">
                 <span className="block absolute rounded-full h-5 aspect-square bg-amber-100 -left-8 mt-2"></span>
+                <div className="bg-black h-50"><img className=" object-contain w-full h-full" src={imgNoDisponible} alt="" /></div>
                 <h5 className="capitalize text-white font-bold mb-3 mt-1 text-2xl">{proj.title}</h5>
                 <strong className="bg-cyber-green/20 rounded-sm border border-cyber-green text-cyber-green px-3 py-1">{proj.year}</strong>
                 <p className="text-gray-100/70 mt-4">{proj.description}</p>

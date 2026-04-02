@@ -29,7 +29,7 @@ export function CardSkill({ name, description,icon }) {
     bg-gradient-to-b from-gray-900/50 to-black
     transition-all duration-300 ease-out
     hover:border-cyber-green hover:shadow-[0_0_20px_rgba(0,255,0,0.15)] 
-    hover:-translate-y-1 group
+    hover:-translate-y-1 group md:aspect-square md:w-full
   `;
 
   const styleClas = 'w-full h-full'
@@ -54,7 +54,7 @@ export function CardSkill({ name, description,icon }) {
   }
 
   return (
-    <div className={styleType}>
+    <div className={styleType }>
       <div className="w-12 h-12 bg-cyber-green/10 rounded-lg flex items-center justify-center border border-cyber-green/10 group-hover:border-cyber-green/40 transition-colors">
         <div className="w-8 h-8  rounded-sm">
           {icons[name]}
