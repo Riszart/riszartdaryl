@@ -22,10 +22,10 @@ export function Tech(){
       description,
       "imageUrl": image.asset->url,
     }`).then((data) => {
-      console.log(data)
+      // console.log(data)
       setTech(data)
       const newData = [...new Set(data.map((i)=>i.area))]
-      console.log(newData)
+      // console.log(newData)
       setCategory(newData)
     })
   }, [])

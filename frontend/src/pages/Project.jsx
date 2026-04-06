@@ -60,7 +60,7 @@ const [proyectos, setProyectos] = useState([])
         <HeaderCardSection nameSection={"proyectos recientes"} icon={<IconTrip/>}/>
         <section className="flex border-l border-cyber-green flex-col pl-5 gap-5">
           {proyectos.map((proj)=>{
-            console.log(proj.imageUrl)
+            // console.log(proj.imageUrl)
             if (proj.visible === false) return null;
             return (
               <article key={`${proj.id}`} className="border border-gray-100/50 p-5 rounded-xl relative">
