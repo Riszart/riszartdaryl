@@ -1,7 +1,7 @@
 import { IconMail, IconLocation, IconPhone, IconWhatsApp, IconGithub, IconYoutubeMusic} from "../components/icon.jsx"
 import { Button } from "../components/Button.jsx"
 import { Form } from "../components/Form.jsx"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 export function Contact(){
   const encodedEmail = "MjIuci5kLnYuYy4xMkBnbWFpbC5jb20="; 
