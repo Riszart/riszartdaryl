@@ -14,7 +14,7 @@ export function Navbar(){
 
   return (
     <>
-      <nav className=" fixed bottom-0 sm:bottom-auto sm:top-0 border-t-2 md:border-t-0 md:border-r-2 border-cyber-green bg-black z-1000 w-full md:h-full md:w-55 md:flex md:flex-col md:items-stretch md:justify-center font-mono">
+      <nav className=" fixed bottom-0 sm:bottom-auto sm:top-0 border-t-2 sm:border-b-2 md:border-b-0 sm:border-t-0 md:border-r-2 border-cyber-green bg-black z-1000 w-full md:h-full md:w-55 md:flex md:flex-col md:items-stretch md:justify-center font-mono">
 
         <div className='hidden md:block w-full mb-10 md:border-y md:border-cyber-green md:py-2'>
           <p className='uppercase w-full text-center text-2xl bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]black font-extrabold font-orbitron'>riszart daryl</p>
@@ -36,7 +36,7 @@ export function Navbar(){
                       </div>
                       <span className="md:text-left">Estudios</span>
                         {isActive && (
-                          <div className="absolute bottom-2 w-10 mb-1 h-[2px] bg-cyber-green shadow-[0_0_8px_rgba(0,255,0,0.8)] rounded-full animate-pulse"></div>
+                          <div className="md:hidden absolute bottom-2 w-10 mb-1 h-0.5 bg-cyber-green shadow-[0_0_8px_rgba(0,255,0,0.8)] rounded-full animate-pulse"></div>
                         )}  
                     </>   
                   )
@@ -57,7 +57,7 @@ export function Navbar(){
                       </div>
                       <span className="md:text-left">proyectos</span>
                         {isActive && (
-                          <div className="absolute bottom-2 w-10 mb-1 h-[2px] bg-cyber-green shadow-[0_0_8px_rgba(0,255,0,0.8)] rounded-full animate-pulse"></div>
+                          <div className="md:hidden absolute bottom-2 w-10 mb-1 h-0.5 bg-cyber-green shadow-[0_0_8px_rgba(0,255,0,0.8)] rounded-full animate-pulse"></div>
                         )}  
                     </>   
                   )
@@ -66,7 +66,7 @@ export function Navbar(){
             </li>
 
             {/* LOGO (Solo escritorio arriba o posición especial) */}
-            <li className="relative md:absolute md:top-10 md:left-0 md:w-full flex justify-center w-27 drop-shadow-[0_0_15px_rgba(0,255,0,0.5)]">
+            <li className=" sm:opacity-0 md:opacity-100 relative md:absolute md:top-10 md:left-0 md:w-full flex justify-center w-27 drop-shadow-[0_0_15px_rgba(0,255,0,0.5)]">
               <NavLink to={'/'}>
                 <LogoRD className="absolute w-27 h-27 md:w-48 md:h-48 text-cyber-green bottom-0 left-0 md:relative"/>
               </NavLink>
@@ -85,7 +85,7 @@ export function Navbar(){
                       </div>
                       <span className="md:text-left">Stack</span>
                         {isActive && (
-                          <div className="absolute bottom-2 w-10 mb-1 h-[2px] bg-cyber-green shadow-[0_0_8px_rgba(0,255,0,0.8)] rounded-full animate-pulse"></div>
+                          <div className="md:hidden absolute bottom-2 w-10 mb-1 h-0.5 bg-cyber-green shadow-[0_0_8px_rgba(0,255,0,0.8)] rounded-full animate-pulse"></div>
                         )}  
                     </>   
                   )
@@ -106,7 +106,7 @@ export function Navbar(){
                       </div>
                       <span className="md:text-left">contacto</span>
                       {isActive && (
-                        <div className="absolute bottom-2 w-10 mb-1 h-[2px] bg-cyber-green shadow-[0_0_8px_rgba(0,255,0,0.8)] rounded-full animate-pulse"></div>
+                        <div className="md:hidden absolute bottom-2 w-10 mb-1 h-0.5 bg-cyber-green shadow-[0_0_8px_rgba(0,255,0,0.8)] rounded-full animate-pulse"></div>
                       )}                    
                     </>
                   )

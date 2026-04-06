@@ -28,6 +28,7 @@ export function Tech(){
 
   return (
     <main className="p-5 pb-30 md:max-w-200 w-full">
+      <div className="sm:h-20 md:h-0"></div>
       {/* <header className="text-center absolute top-0 w-full left-0 border-b border-gray-100/40 flex justify-center">
         <div className="w-10 aspect-square absolute border border-cyber-green/50 left-0 rounded-xl"></div>
         <h1 className="uppercase font-semibold -tracking-tighter text-2xl py-5">tech stack</h1>
@@ -41,7 +42,7 @@ export function Tech(){
           <span className=" mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">Digital</span>
         </div>
         <div>
-          <p className="text-gray-400 leading-relaxed max-w-lg">Una selección especializada de herramientas, librerías y lenguajes que utilizo para construir aplicaciones web escalables y de alto rendimiento.</p>
+          <p className="text-gray-400 leading-relaxed">Una selección especializada de herramientas, librerías y lenguajes que utilizo para construir aplicaciones web escalables y de alto rendimiento.</p>
         </div>
       </section>
       <HeaderCardSection nameSection={"frontend"} icon={<IconNewsMode/>}/>

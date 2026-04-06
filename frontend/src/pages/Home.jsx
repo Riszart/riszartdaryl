@@ -29,6 +29,7 @@ export function Home(){
             <Button text={'descargar cv'} icon={Download} variant={"secondary"}/>
           </a>
         </div>
+        <div className="h-10"></div>
       </main>    
     </>
   )

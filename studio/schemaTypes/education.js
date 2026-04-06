@@ -14,6 +14,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'visible',
+      title: 'mostrar en el portafolio',
+      type: 'boolean',
+    },
+    {
       name: 'institute',
       title: 'Institute',
       type: 'string',

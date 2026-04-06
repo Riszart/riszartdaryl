@@ -7,7 +7,7 @@ export function Contact(){
   const encodedEmail = "MjIuci5kLnYuYy4xMkBnbWFpbC5jb20="; 
   const encodedPhone = "KzUxIDkyMyAyMzIgODcw";
 
-  const [mailRevealed, setMailRevealed] = useState(false);
+  // const [mailRevealed, setMailRevealed] = useState(false);
   const [phoneRevealed, setPhoneRevealed] = useState(false);
   const [isForm, setIsform] = useState(false)
 
@@ -24,10 +24,11 @@ export function Contact(){
 
   return (
     <main className="p-5 pb-30 md:max-w-200 w-full">
+      <div className="sm:h-20 md:h-0"></div>
       <section className="mb-15">
         <span className="uppercase text-cyber-green">CONTACTO</span>
         <h2 className="mt-5 capitalize text-5xl font-bold mb-6 font-orbitron"> <span className="md:text-7xl mt-2 bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">¡Hablemos!</span></h2>
-        <p className="text-gray-400 leading-relaxed max-w-lg">¿Tienes un proyecto en mente? Estoy disponible para trabajos freelance y posiciones de tiempo completo.</p>
+        <p className="text-gray-400 leading-relaxed ">¿Tienes un proyecto en mente? Estoy disponible para trabajos freelance y posiciones de tiempo completo.</p>
       </section>
 
       <section className="flex flex-col gap-4">
@@ -38,13 +39,13 @@ export function Contact(){
             </div>
             <div className="flex flex-col items-start">
               <strong className="uppercase font-normal text-gray-100/50 text-xs">CORREO</strong>
-              <h6 onClick={()=>{setIsform(!isForm)}} className="text-sm">{mailRevealed ? atob(encodedEmail) : "Haz clic para ver"}</h6>
+              <h6 onClick={()=>{setIsform(!isForm)}} className="text-sm">{isForm ? "Haz clic para cerrar": "Haz clic para ver"}</h6>
             </div>            
           </section>
           <section>
                     <Form className={ `transition-all duration-500 
           ${isForm 
-            ? 'max-h-[600px] my-5 border p-4 border-green-500 rounded-lg opacity-100 scale-100 pointer-events-auto"' 
+            ? 'max-h-150 my-5 border p-4 border-green-500 rounded-lg opacity-100 scale-100 pointer-events-auto"' 
             : 'max-h-0 p-0 m-0 opacity-0 scale-95 pointer-events-none'}`}/>
           </section>
         </article>

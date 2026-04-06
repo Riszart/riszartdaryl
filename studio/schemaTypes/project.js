@@ -14,6 +14,11 @@ export default {
       type: 'string',
     },
     {
+      name: 'visible',
+      title: 'mostrar en el portafolio',
+      type: 'boolean',
+    },
+    {
       name: 'description',
       title: 'Description',
       type: 'text',
@@ -49,3 +54,4 @@ export default {
     }
   ],
 }
+
