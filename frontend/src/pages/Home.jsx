@@ -31,7 +31,7 @@ export function Home(){
           <NavLink to={'/Project'}>
             <Button text={'ver proyectos'} icon={ArrowIcon} />
           </NavLink>
-          <a href="../public/pdf/cv-riszart-daryl-vergara-cajacuri.pdf" download='cv-riszart-daryl-vergara-cajacuri.pdf'>
+          <a href="/pdf/cv-riszart-daryl-vergara-cajacuri.pdf" download='cv-riszart-daryl-vergara-cajacuri.pdf'>
             <Button text={'descargar cv'} icon={Download} variant={"secondary"}/>
           </a>
         </div>
