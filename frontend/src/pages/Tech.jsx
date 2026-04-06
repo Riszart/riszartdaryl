@@ -9,6 +9,10 @@ export function Tech(){
 
   const [tech, setTech] = useState([])
   const [category, setCategory] = useState([])
+
+  useEffect(() => {
+    document.title = "Tecnologías | Riszart Daryl";
+  }, []);
   
   useEffect(() => {
     client.fetch(`*[_type == "tech"]{

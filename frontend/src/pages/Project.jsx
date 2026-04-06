@@ -23,6 +23,10 @@ export function Project(){
 const [proyectos, setProyectos] = useState([])
 
   useEffect(() => {
+    document.title = "Proyectos | Riszart Daryl";
+  }, []);
+
+  useEffect(() => {
     client.fetch(`*[_type == "project"]{
       id,
       title,

@@ -11,6 +11,10 @@ export function Education(){
 const [education, setEducation] = useState([])
 
   useEffect(() => {
+    document.title = "Educación | Riszart Daryl";
+  }, []);
+
+  useEffect(() => {
 
     client.fetch(`*[_type == "education"]{
       id,

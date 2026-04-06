@@ -21,6 +21,9 @@ export function Contact(){
       setPhoneRevealed(true);
     }
   }
+    useEffect(() => {
+      document.title = "Contacto | Riszart Daryl";
+    }, []);
 
   return (
     <main className="p-5 pb-30 md:max-w-200 w-full">
