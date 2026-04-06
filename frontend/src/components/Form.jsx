@@ -24,6 +24,8 @@ export function Form({className}){
 		const myForm = event.target;
     const formData = new FormData(myForm);
 
+		formData.set("form-name", "contacto-portafolio");
+
 		fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -48,9 +50,9 @@ export function Form({className}){
 			name="contacto-portafolio" 
   		data-netlify="true" 
 			className={`flex flex-col gap-4  overflow-hidden ${className}`}>
-			<input type="hidden" name="form-name" value="contacto-portafolio" />
 			<div className="opacity-0 absolute -z-10 w-0 h-0 overflow-hidden">
-				<input name="nombre" autoComplete="off" type="text" onChange={(e)=>{setHoneypot(e.target.value)}}/>	
+				<input type="hidden" name="form-name" value="contacto-portafolio" />
+				<input name="isBot" autoComplete="off" type="text" onChange={(e)=>{setHoneypot(e.target.value)}}/>	
 			</div>
 			<div className={divEstilos}>
 				<label className={labelEstilos} htmlFor="name">nombre</label>

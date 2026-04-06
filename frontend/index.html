@@ -30,11 +30,13 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <form name="contacto-portafolio" data-netlify="true" hidden>
+    <form name="contacto-portafolio" data-netlify="true" netlify-honeypot="isBot" hidden>
+      <input type="hidden" name="form-name" value="contacto-portafolio" />
       <input type="text" name="nombre" />
       <input type="email" name="email" />
       <input type="tel" name="celular" />
       <textarea name="mensaje"></textarea>
+      <input type="text" name="isBot" />
     </form>
   </body>
 </html>
