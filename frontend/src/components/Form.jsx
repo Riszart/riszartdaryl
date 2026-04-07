@@ -40,7 +40,6 @@ export function Form({className}){
 			if (response.ok) {
 				// 3. SOLO CUANDO EL SERVIDOR RESPONDE "OK", LIMPIAMOS
 				alert("¡Mensaje enviado correctamente!");
-				setData({ name: "", email: "", cell: "", message: "" });
 			} else {
 				alert("Error en el servidor de Netlify");
 			}
