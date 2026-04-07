@@ -28,6 +28,7 @@ function enviarForm(event) {
     formData.append("email", data.email);
     formData.append("celular", data.cell);
     formData.append("mensaje", data.message);
+		formData.append("bot-field", honeypot);
 
     fetch("/", {
       method: "POST",
