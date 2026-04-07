@@ -24,15 +24,16 @@ export function Form({className}){
 		const myForm = event.target;
     const formData = new FormData(myForm);
 
-		formData.set("form-name", "contacto-portafolio");
+		formData.set("form-name", "contacto-nuevo");
 
 		fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: "form-name=contacto-portafolio&nombre=PruebaBot&email=test@test.com&mensaje=Hola",
+    body: new URLSearchParams(formData).toString(),
   	})
     .then(() => {
       alert("¡Mensaje enviado correctamente!");
+			window.location.reload()
     })
     .catch((error) => alert("Error al enviar: " + error));
 		//---
@@ -46,11 +47,11 @@ export function Form({className}){
 	return (
 		<form 
 			onSubmit={enviarForm} 
-			name="contacto-portafolio" 
+			name="contacto-nuevo" 
   		data-netlify="true" 
 			className={`flex flex-col gap-4  overflow-hidden ${className}`}>
 			<div className="opacity-0 absolute -z-10 w-0 h-0 overflow-hidden">
-				<input type="hidden" name="form-name" value="contacto-portafolio" />
+				<input type="hidden" name="form-name" value="contacto-nuevo" />
 				<input name="isBot" autoComplete="off" type="text" onChange={(e)=>{setHoneypot(e.target.value)}}/>	
 			</div>
 			<div className={divEstilos}>
