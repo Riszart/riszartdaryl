@@ -12,7 +12,7 @@ export function Form({className}){
 		message:""
 	})
 
-	async function enviarForm(event){
+	function enviarForm(event){
 		event.preventDefault()
 		if(honeypot){
 			// console.log("Formulario enviado por un bot")
@@ -38,11 +38,8 @@ export function Form({className}){
   	})
     .then(() => {
       alert("¡Mensaje enviado correctamente!")
-			// setData({name:"", email:"", cell:"", message:""});
     })
-		.then(() => {
-			setData({name:"", email:"", cell:"", message:""});
-    })
+
     .catch((error) => alert("Error al enviar: " + error));
 		//---
 	}
