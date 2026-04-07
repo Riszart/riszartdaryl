@@ -14,6 +14,7 @@ export function Form({className}){
 
 	function enviarForm(event){
 		event.preventDefault()
+		const dataNew = data
 		if(honeypot){
 			// console.log("Formulario enviado por un bot")
 			return
@@ -24,10 +25,10 @@ export function Form({className}){
 
 		const body = new URLSearchParams({
 			"form-name": "contacto-nuevo",
-      "nombre": data.name,
-      "email": data.email,
-      "celular": data.cell,
-      "mensaje": data.message,
+      "nombre": dataNew.name,
+      "email": dataNew.email,
+      "celular": dataNew.cell,
+      "mensaje": dataNew.message,
       "isBot": honeypot // opcional
 		}).toString();
 
@@ -38,6 +39,7 @@ export function Form({className}){
   	})
     .then(() => {
       alert("¡Mensaje enviado correctamente!")
+			setData({ name: "", email: "", cell: "", message: "" });
     })
 
     .catch((error) => alert("Error al enviar: " + error));
