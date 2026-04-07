@@ -38,7 +38,7 @@ function enviarForm(event) {
     .then((response) => {
       if (response.ok) {
         alert("¡Mensaje enviado correctamente!");
-        window.location.reload();
+        // window.location.reload();
       } else {
         throw new Error("Respuesta del servidor no fue OK");
       }
