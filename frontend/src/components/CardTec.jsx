@@ -81,7 +81,7 @@ export function HeaderCardSection({nameSection ,icon}){
     {nameSection}
   </strong>
 
-  <span className="flex-grow border-b border-cyber-green/30 shadow-[0_0_10px_rgba(0,255,0,0.1)]"></span>
+  <span className="grow border-b border-cyber-green/30 shadow-[0_0_10px_rgba(0,255,0,0.1)]"></span>
 </div>
   )
 }

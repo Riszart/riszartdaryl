@@ -12,32 +12,38 @@ export function Form({className}){
 		message:""
 	})
 
-	function enviarForm(event){
-		event.preventDefault()
-		if(honeypot){
-			// console.log("Formulario enviado por un bot")
-			return
-		}
-		// console.log("Formulario enviado por un humano")
+function enviarForm(event) {
+    event.preventDefault();
+    
+    // Si el honeypot tiene algo, bloqueamos el envío (es un bot)
+    if (honeypot) return;
 
-		//--- form netlify
-		const myForm = event.target;
-    const formData = new FormData(myForm);
+    const myForm = event.target;
+    
+    // Creamos los datos manualmente desde el estado 'data' 
+    // para evitar problemas de sincronización con el DOM
+    const formData = new FormData();
+    formData.append("form-name", "contacto-nuevo");
+    formData.append("nombre", data.name);
+    formData.append("email", data.email);
+    formData.append("celular", data.cell);
+    formData.append("mensaje", data.message);
 
-		formData.set("form-name", "contacto-nuevo");
-
-		fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  	})
-    .then(() => {
-      alert("¡Mensaje enviado correctamente!");
-			window.location.reload()
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+    .then((response) => {
+      if (response.ok) {
+        alert("¡Mensaje enviado correctamente!");
+        window.location.reload();
+      } else {
+        throw new Error("Respuesta del servidor no fue OK");
+      }
     })
     .catch((error) => alert("Error al enviar: " + error));
-		//---
-	}
+  }
 
 	const inputEstilos = "h-15 border border-cyber-green/30 focus:border-cyber-skyblue focus:outline-none p-2 rounded-md"
 	const textareaEstilos = "h-30 border border-cyber-green/30 focus:border-cyber-skyblue focus:outline-none rounded-md p-2 resize-none"
@@ -49,6 +55,8 @@ export function Form({className}){
 			onSubmit={enviarForm} 
 			name="contacto-nuevo" 
   		data-netlify="true" 
+			netlify-honeypot="bot-field" 
+			netlify 
 			className={`flex flex-col gap-4  overflow-hidden ${className}`}>
 			<div className="opacity-0 absolute -z-10 w-0 h-0 overflow-hidden">
 				<input type="hidden" name="form-name" value="contacto-nuevo" />
