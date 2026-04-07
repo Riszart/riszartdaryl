@@ -60,7 +60,7 @@ function enviarForm(event) {
 			className={`flex flex-col gap-4  overflow-hidden ${className}`}>
 			<div className="opacity-0 absolute -z-10 w-0 h-0 overflow-hidden">
 				<input type="hidden" name="form-name" value="contacto-nuevo" />
-				<input name="isBot" autoComplete="off" type="text" onChange={(e)=>{setHoneypot(e.target.value)}}/>	
+				<input name="bot-field" autoComplete="off" type="text" onChange={(e)=>{setHoneypot(e.target.value)}}/>	
 			</div>
 			<div className={divEstilos}>
 				<label className={labelEstilos} htmlFor="name">nombre</label>
