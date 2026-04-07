@@ -21,15 +21,20 @@ export function Form({className}){
 		// console.log("Formulario enviado por un humano")
 
 		//--- form netlify
-		const myForm = event.target;
-    const formData = new FormData(myForm);
 
-		formData.set("form-name", "contacto-nuevo");
+		const body = new URLSearchParams({
+			"form-name": "contacto-nuevo",
+      "nombre": data.name,
+      "email": data.email,
+      "celular": data.cell,
+      "mensaje": data.message,
+      "isBot": honeypot // opcional
+		}).toString();
 
 		fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
+    body: body,
   	})
     .then(() => {
       alert("¡Mensaje enviado correctamente!")
