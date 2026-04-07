@@ -29,11 +29,10 @@ export function Form({className}){
 		fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
+    body: "form-name=contacto-portafolio&nombre=PruebaBot&email=test@test.com&mensaje=Hola",
   	})
     .then(() => {
       alert("¡Mensaje enviado correctamente!");
-      setData({name:"",email:"",cell:"",message:""})
     })
     .catch((error) => alert("Error al enviar: " + error));
 		//---
