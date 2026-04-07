@@ -21,30 +21,19 @@ export function Form({className}){
 		// console.log("Formulario enviado por un humano")
 
 		//--- form netlify
+		const myForm = event.target;
+    const formData = new FormData(myForm);
 
-		const body = new URLSearchParams({
-			"form-name": "contacto-nuevo",
-      "nombre": data.name,
-      "email": data.email,
-      "celular": data.cell,
-      "mensaje": data.message,
-      "isBot": honeypot // opcional
-		}).toString();
+		formData.set("form-name", "contacto-nuevo");
 
 		fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: body,
+    body: new URLSearchParams(formData).toString(),
   	})
-    .then((response) => {
-			if (response.ok) {
-				// 3. SOLO CUANDO EL SERVIDOR RESPONDE "OK", LIMPIAMOS
-				alert("¡Mensaje enviado correctamente!");
-			} else {
-				alert("Error en el servidor de Netlify");
-			}
+    .then(() => {
+      alert("¡Mensaje enviado correctamente!")
     })
-
     .catch((error) => alert("Error al enviar: " + error));
 		//---
 	}
