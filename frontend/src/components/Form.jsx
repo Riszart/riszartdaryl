@@ -14,7 +14,6 @@ export function Form({className}){
 
 	function enviarForm(event){
 		event.preventDefault()
-		const dataNew = data
 		if(honeypot){
 			// console.log("Formulario enviado por un bot")
 			return
@@ -25,10 +24,10 @@ export function Form({className}){
 
 		const body = new URLSearchParams({
 			"form-name": "contacto-nuevo",
-      "nombre": dataNew.name,
-      "email": dataNew.email,
-      "celular": dataNew.cell,
-      "mensaje": dataNew.message,
+      "nombre": data.name,
+      "email": data.email,
+      "celular": data.cell,
+      "mensaje": data.message,
       "isBot": honeypot // opcional
 		}).toString();
 
@@ -37,9 +36,14 @@ export function Form({className}){
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
     body: body,
   	})
-    .then(() => {
-      alert("¡Mensaje enviado correctamente!")
-			setData({ name: "", email: "", cell: "", message: "" });
+    .then((response) => {
+			if (response.ok) {
+				// 3. SOLO CUANDO EL SERVIDOR RESPONDE "OK", LIMPIAMOS
+				alert("¡Mensaje enviado correctamente!");
+				setData({ name: "", email: "", cell: "", message: "" });
+			} else {
+				alert("Error en el servidor de Netlify");
+			}
     })
 
     .catch((error) => alert("Error al enviar: " + error));
