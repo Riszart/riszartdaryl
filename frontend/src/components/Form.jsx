@@ -33,6 +33,8 @@ export function Form({className}){
   	})
     .then(() => {
       alert("¡Mensaje enviado correctamente!")
+			setData({name:"", email:"", cell:"", message:""});
+			myForm.reset();
     })
     .catch((error) => alert("Error al enviar: " + error));
 		//---
