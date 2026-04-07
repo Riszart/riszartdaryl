@@ -7,8 +7,10 @@ import { Button } from "../components/Button"
 
 
 export function Education(){
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {setIsVisible(true)}, []);
 
-const [education, setEducation] = useState([])
+  const [education, setEducation] = useState([])
 
   useEffect(() => {
     document.title = "Educación | Riszart Daryl";
@@ -31,7 +33,7 @@ const [education, setEducation] = useState([])
   }, [])
 
   return (
-    <main className="p-5 pb-30 md:max-w-200 w-full">
+    <main className={`p-5 pb-30 md:max-w-200 w-full transition-opacity duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'} p-5 pb-30`}>
       <div className="sm:h-20 md:h-0"></div>
       <section className="mb-5">
         <span className="uppercase text-cyber-green" >educación</span>

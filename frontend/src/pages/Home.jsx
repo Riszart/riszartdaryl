@@ -1,19 +1,19 @@
 import { Button } from "../components/Button";
 import { NavLink } from "react-router-dom"
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 
 export function Home(){
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {setIsVisible(true)}, [])
 
-    useEffect(() => {
-    document.title = "Inicio | Riszart Daryl";
-  }, []);
+  useEffect(() => {document.title = "Inicio | Riszart Daryl"}, []);
 
   const ArrowIcon= (<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>)
   const Download = (<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-320 280-520l56-58 104 104v-326h80v326l104-104 56 58-200 200ZM240-160q-33 0-56.5-23.5T160-240v-120h80v120h480v-120h80v120q0 33-23.5 56.5T720-160H240Z"/></svg>)
 
   return (
     <>
-      <main className="min-h-screen box-content pl-5 pr-5 flex flex-col justify-center sm:items-center gap-10 relative">
+      <main className={`min-h-screen box-content pl-5 pr-5 flex flex-col justify-center sm:items-center gap-10 relative transition-opacity duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'} p-5 pb-30`}>
         {/* <div className="h-40 w-40 absolute inset-0 top-5 mx-auto ">
           <img src={logo} alt="" className=""/>
         </div> */}

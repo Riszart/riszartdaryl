@@ -32,7 +32,8 @@ export function Form({className}){
     body: new URLSearchParams(formData).toString(),
   	})
     .then(() => {
-      alert("¡Mensaje enviado correctamente!")
+      alert("¡Mensaje enviado correctamente!");
+			window.location.reload()
     })
     .catch((error) => alert("Error al enviar: " + error));
 		//---

@@ -18,9 +18,12 @@ const client = createClient({
 import { FaGithub } from "react-icons/fa";
 
 import { HiExternalLink } from "react-icons/hi";
-export function Project(){
 
-const [proyectos, setProyectos] = useState([])
+export function Project(){
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {setIsVisible(true)}, []);
+
+  const [proyectos, setProyectos] = useState([])
 
   useEffect(() => {
     document.title = "Proyectos | Riszart Daryl";
@@ -44,7 +47,7 @@ const [proyectos, setProyectos] = useState([])
   }, [])
 
   return (
-    <main className="p-5 pb-30 md:max-w-200 w-full">
+    <main className={`p-5 pb-30 md:max-w-200 w-full transition-opacity duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'} p-5 pb-30`}>
       <div className="sm:h-20 md:h-0"></div>
       <section className="mb-5">
         <span className="uppercase text-cyber-green">portafolio</span>

@@ -4,6 +4,10 @@ import { Form } from "../components/Form.jsx"
 import { useState, useEffect } from "react"
 
 export function Contact(){
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {setIsVisible(true)}, []);
+
+
   const encodedEmail = "MjIuci5kLnYuYy4xMkBnbWFpbC5jb20="; 
   const encodedPhone = "KzUxIDkyMyAyMzIgODcw";
 
@@ -26,7 +30,7 @@ export function Contact(){
     }, []);
 
   return (
-    <main className="p-5 pb-30 md:max-w-200 w-full">
+    <main className={`p-5 pb-30 md:max-w-200 w-full transition-opacity duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'} p-5 pb-30`}>
       <div className="sm:h-20 md:h-0"></div>
       <section className="mb-15">
         <span className="uppercase text-cyber-green">CONTACTO</span>

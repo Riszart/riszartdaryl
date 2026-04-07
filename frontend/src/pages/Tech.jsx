@@ -6,6 +6,8 @@ import { useEffect, useState } from "react"
 import { client } from "../client/sanity.js"
 
 export function Tech(){
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {setIsVisible(true)}, []);
 
   const [tech, setTech] = useState([])
   const [category, setCategory] = useState([])
@@ -31,7 +33,7 @@ export function Tech(){
   }, [])
 
   return (
-    <main className="p-5 pb-30 md:max-w-200 w-full">
+    <main className={`p-5 pb-30 md:max-w-200 w-full transition-opacity duration-700 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'} p-5 pb-30`}>
       <div className="sm:h-20 md:h-0"></div>
       {/* <header className="text-center absolute top-0 w-full left-0 border-b border-gray-100/40 flex justify-center">
         <div className="w-10 aspect-square absolute border border-cyber-green/50 left-0 rounded-xl"></div>
