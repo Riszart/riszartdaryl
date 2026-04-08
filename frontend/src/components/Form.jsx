@@ -15,13 +15,10 @@ export function Form({className}){
 function enviarForm(event) {
     event.preventDefault();
     
-    // Si el honeypot tiene algo, bloqueamos el envío (es un bot)
     if (honeypot) return;
 
     const myForm = event.target;
     
-    // Creamos los datos manualmente desde el estado 'data' 
-    // para evitar problemas de sincronización con el DOM
     const formData = new FormData();
     formData.append("form-name", "contacto-nuevo");
     formData.append("nombre", data.name);
