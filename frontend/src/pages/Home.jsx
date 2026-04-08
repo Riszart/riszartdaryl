@@ -21,7 +21,7 @@ export function Home(){
           <strong className="tracking-[3px] p-2 text-xs inline text-cyber-green uppercase shadow-[0_0_15px_5px_rgba(34,197,94,0.4)] rounded-md">system online</strong>
         </div>
 
-        <h1 className="text-4xl sm:text-7xl uppercase font-bold text-center font-orbitron">frontend
+        <h1 className="text-4xl sm:text-7xl uppercase font-bold text-center font-orbitron">fullestack
           <span className="mt-2 block  bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">developer</span>
         </h1>
 
