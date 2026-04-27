@@ -21,12 +21,13 @@ export function Home(){
           <strong className="tracking-[3px] p-2 text-xs inline text-cyber-green uppercase shadow-[0_0_15px_5px_rgba(34,197,94,0.4)] rounded-md">system online</strong>
         </div>
 
-        <h1 className="text-4xl sm:text-7xl uppercase font-bold text-center font-orbitron">fullestack
+        <h1 className="text-4xl sm:text-7xl uppercase font-bold text-center font-orbitron">fullstack
           <span className="mt-2 block  bg-linear-to-r from-cyber-green via-cyber-white to-cyber-skyblue bg-clip-text text-transparent drop-shadow-[0_0_30px_var(--color-cyber-green-shadow)]">developer</span>
         </h1>
-
+        <p className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">@ Frontend Focused</p>
+        
         <p className="border-l border-cyber-green pl-2 text-white/50 text-justify sm:w-3/4 sm:text-lg">
-        Construyo interfaces dinámicas con React y estándares web modernos. Mi trabajo se centra en transformar conceptos en realidades digitales mediante código eficiente y diseños fluidas con TailwindCSS</p>
+        Transformo ideas en productos digitales de alto rendimiento. Mi enfoque combina la lógica avanzada de JavaScript y React con la precisión estética de Tailwind CSS. Como Fullstack, entiendo la arquitectura completa de una aplicación, pero mi pasión es construir interfaces donde el diseño y la funcionalidad convergen.</p>
         <div className="flex gap-10 flex-col sm:flex-row">
           <NavLink to={'/Project'}>
             <Button text={'ver proyectos'} icon={ArrowIcon} />
