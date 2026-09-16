@@ -2,7 +2,7 @@ import {
   IoLogoHtml5,
   IoLogoCss3,
   IoLogoJavascript,
-  IoLogoDocker
+  IoLogoDocker,
 } from "react-icons/io5";
 
 import { 
@@ -11,6 +11,7 @@ import {
   SiVite,
   SiSanity,
   SiMysql,
+  SiKotlin,
 } from "react-icons/si";
 
 import { 
@@ -21,6 +22,8 @@ import {
   FaFigma,
   FaGitAlt,
   FaLinux,
+  FaPhp,
+  FaJava,
 } from "react-icons/fa";
 
 export function CardSkill({ name, description,icon }) {
@@ -51,6 +54,9 @@ export function CardSkill({ name, description,icon }) {
     "MySQL": <SiMysql className={styleClas}/>,
     "Linux": <FaLinux className={styleClas}/>,
     "Docker": <IoLogoDocker className={styleClas}/>,
+    "PHP": <FaPhp className={styleClas}/>,
+    "Kotlin": <SiKotlin className={styleClas}/>,
+    "JAVA": <FaJava className={styleClas}/>,
   }
 
   return (

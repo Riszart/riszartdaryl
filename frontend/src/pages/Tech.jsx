@@ -1,5 +1,5 @@
 import { CardSkill, HeaderCardSection } from "../components/CardTec.jsx"
-import {IconTools, IconNewsMode,IconStorage} from "../components/icon.jsx"
+import {IconTools, IconNewsMode, IconStorage,IconDesign,IconDatabase,IconVps} from "../components/icon.jsx"
 
 import { useEffect, useState } from "react" 
 
@@ -78,7 +78,7 @@ export function Tech(){
           return null
         })}
       </section>
-      <HeaderCardSection nameSection={"Gestión de Datos"} icon={<IconTools/>}/>
+      <HeaderCardSection nameSection={"Gestión de Datos"} icon={<IconDatabase/>}/>
       <section className="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-6">
         {tech.map((item)=>{
           if(item.area === 'Gestión de Datos'){
@@ -87,7 +87,7 @@ export function Tech(){
           return null
         })}
       </section>
-      <HeaderCardSection nameSection={"Infraestructura / DevOps"} icon={<IconTools/>}/>
+      <HeaderCardSection nameSection={"Infraestructura / DevOps"} icon={<IconVps/>}/>
       <section className="grid grid-cols-[repeat(auto-fill,minmax(120px,1fr))] gap-6">
         {tech.map((item)=>{
           if(item.area === 'Entorno de Desarrollo'){
